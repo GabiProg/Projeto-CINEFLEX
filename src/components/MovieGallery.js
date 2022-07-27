@@ -1,13 +1,16 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import "../styles/Reset.css";
 import "../styles/Style_gallery.css";
 
-function Posters({ source, alt }) {
+function Posters({ source, alt, id }) {
     return (
         <>
             <div className="filmBox">
-                <img src={source} alt={alt} />
+                <Link to={`/sessoes/${id}`}>
+                    <img src={source} alt={alt} />
+                </Link>
             </div>
         </>
     );
