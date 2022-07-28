@@ -1,0 +1,100 @@
+.screen2 {
+    width: 100%;
+    height: auto;
+    background-color: #FFFFFF;
+}
+
+.selectSession {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selectSession h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #293845;
+}
+
+.session-gallery {
+    width: 100%;
+    height: auto;
+}
+
+.date-gallery {
+    width: 241px;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 24px;
+    margin-bottom: 22px;
+    box-sizing: border-box;
+}
+
+.date-gallery h3 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+    color: #293845;
+}
+
+.date-gallery h4 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+    color: #293845;
+}
+
+.hourGallery {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin-left: 24px;
+    margin-bottom: 23px;
+    gap: 8px;
+}
+
+.option {
+    width: 83px;
+    height: 43px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #E8833A;
+    border-radius: 3px;
+}
+
+.option h3 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}

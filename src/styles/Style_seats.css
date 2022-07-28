@@ -1,0 +1,54 @@
+.screen{
+    width: 100%;
+    height: auto;
+    background-color: #FFFFFF;
+}
+.select-seats{
+    width: 100%;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.select-seats h2{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #293845;
+}
+.seats-gallery{
+    width: 100%;
+    height: auto;
+    margin-left: 15px;
+    margin-right: 15px;
+    gap: 7px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.seats-gallery div{
+    width: 26px;
+    height: 25px;
+    background: #C3CFD9;
+    border: 1px solid #808F9D;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+.seats-gallery div h3{
+    padding: 7px 7px 8px 6px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #000000;
+}
