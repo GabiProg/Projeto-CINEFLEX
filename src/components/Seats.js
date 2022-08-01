@@ -46,14 +46,15 @@ export default function Seats(props) {
       cpf: cpf   
     });
 
+    // const times = dates.filter((day) => day.weekday === day.weekday);
+    // const datas = dates.filter((day) => day.date === day.date);
+
     promise.then((response) => {
       dadosDaCompra({
         ids: [...selectedSeats.keys()],
         name: nome,
         cpf: cpf,
         seat: selectedSeats,
-        day: dates.weekday,
-        data: dates.date,
         titulo: dates.title
       });
       navigate("/sucesso")

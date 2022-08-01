@@ -18,7 +18,8 @@ export default function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<MovieGallery />} />
-          <Route path="/sessoes/:id" element={<Sessions dates={dates} setDates={setDates}/>} />
+          <Route path="/sessoes/:id" element={<Sessions dates={dates} 
+          setDates={setDates}/>} />
           <Route path="/assentos/:id" element={<Seats dates={dates} dadosDaCompra={
             (dados) => setDados(dados)}/>} />
           <Route path="/sucesso" element={<Success dados={dados}/>} />
