@@ -9,7 +9,7 @@ import "../styles/Style_seats.css";
 export default function Seats(props) {
   const { id } = useParams();
   const navigate = useNavigate();
-  const {dates} = props;
+  const {dates, dadosDaCompra} = props;
 
   const [chairs, setChairs] = useState(null);
   const [nome, setNome] = useState("");
@@ -40,13 +40,24 @@ export default function Seats(props) {
   function GetUserInformation(e){
     e.preventDefault();
     
-    const OBJ = {
+    const promise = axios.post('https://mock-api.driven.com.br/api/v7/cineflex/seats/book-many',{
       ids: [...selectedSeats.keys()],
       name: nome,
       cpf: cpf   
-    };
+    });
 
-    const request = axios.post('https://mock-api.driven.com.br/api/v7/cineflex/seats/book-many', OBJ);
+    promise.then((response) => {
+      dadosDaCompra({
+        ids: [...selectedSeats.keys()],
+        name: nome,
+        cpf: cpf,
+        seat: selectedSeats,
+        day: dates.weekday,
+        data: dates.date,
+        titulo: dates.title
+      });
+      navigate("/sucesso")
+    })
   }
   
 

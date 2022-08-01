@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import "../styles/Reset.css";
 import "../styles/Style_session.css";
 
-function DatesGallery({ day, data, showtimes, id }) {
+function DatesGallery({ day, data, showtimes, id}) {
 
   return (
     <>
@@ -16,7 +16,7 @@ function DatesGallery({ day, data, showtimes, id }) {
         </h3>
       </div>
       <div className="hourGallery">
-        <TimeGallery showtimes={showtimes} id={id} />
+        <TimeGallery showtimes={showtimes} id={id}/>
       </div>
     </>
   );
