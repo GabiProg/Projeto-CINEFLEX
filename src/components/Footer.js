@@ -2,7 +2,7 @@ import "../styles/Reset.css";
 import "../styles/Style_footer.css";
 
 export default function Footer({ src, alt, name, data, day }) {
-  console.log(data, day);
+  
   return (
     <div className="footer">
       <div className="flex">

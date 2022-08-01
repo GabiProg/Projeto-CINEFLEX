@@ -6,8 +6,13 @@ import Footer from "./Footer";
 import "../styles/Reset.css";
 import "../styles/Style_session.css";
 
-function DatesGallery({ day, data, showtimes, id}) {
+function DatesGallery(props) {
 
+  const { day, data, showtimes, id} = props;
+  console.log(day, data, showtimes, id);
+
+  const [hours, setHours] = useState(showtimes, id);
+ 
   return (
     <>
       <div>
@@ -16,7 +21,7 @@ function DatesGallery({ day, data, showtimes, id}) {
         </h3>
       </div>
       <div className="hourGallery">
-        <TimeGallery showtimes={showtimes} id={id}/>
+        <TimeGallery showtimes={showtimes} id={id} hours={hours}/>
       </div>
     </>
   );
@@ -27,6 +32,7 @@ export default function Sessions(props) {
 
   const {dates, setDates} = props;
 
+ 
   useEffect(() => {
     const URL = `https://mock-api.driven.com.br/api/v5/cineflex/movies/${id}/showtimes`;
 
