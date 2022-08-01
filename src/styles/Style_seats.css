@@ -1,16 +1,18 @@
-.screen{
+.screen {
     width: 100%;
     height: auto;
     background-color: #FFFFFF;
 }
-.select-seats{
+
+.select-seats {
     width: 100%;
     height: 110px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.select-seats h2{
+
+.select-seats h2 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -22,7 +24,8 @@
     letter-spacing: 0.04em;
     color: #293845;
 }
-.seats-gallery{
+
+.seats-gallery {
     width: 100%;
     height: auto;
     margin-left: 15px;
@@ -31,7 +34,8 @@
     display: flex;
     flex-wrap: wrap;
 }
-.seats-gallery div{
+
+.seats-gallery div {
     width: 26px;
     height: 25px;
     background: #C3CFD9;
@@ -39,7 +43,8 @@
     border-radius: 12px;
     margin-bottom: 16px;
 }
-.seats-gallery div h3{
+
+.seats-gallery div h3 {
     padding: 7px 7px 8px 6px;
     font-family: 'Roboto';
     font-style: normal;
@@ -52,3 +57,184 @@
     letter-spacing: 0.04em;
     color: #000000;
 }
+
+.box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-left: 50px;
+    margin-bottom: 41px;
+}
+
+.selecionado {
+    width: 91px;
+    height: auto;
+    margin-right: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.selecionado div {
+    box-sizing: border-box;
+    width: 25px;
+    height: 25px;
+    background: #8DD7CF;
+    border: 1px solid #1AAE9E;
+    border-radius: 17px;
+    margin-bottom: 8px;
+}
+
+.selecionado p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.013em;
+    color: #4E5A65;
+}
+
+.disponivel {
+    width: 65px;
+    height: auto;
+    margin-right: 27px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.disponivel div {
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    background: #C3CFD9;
+    border: 1px solid #7B8B99;
+    border-radius: 17px;
+    margin-bottom: 8px;
+}
+
+.disponivel p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.013em;
+    color: #4E5A65;
+}
+
+.indisponivel {
+    width: 91px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.indisponivel div {
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    background: #FBE192;
+    border: 1px solid #F7C52B;
+    border-radius: 17px;
+    margin-bottom: 8px;
+}
+
+.indisponivel p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.013em;
+    color: #4E5A65;
+}
+
+.nome-comprador,
+.cpf-comprador {
+    width: 100%;
+    height: auto;
+    margin-left: 24px;
+    margin-bottom: 9px;
+}
+
+#campoNome,
+#campoCPF {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #293845;
+    margin-bottom: 4px;
+}
+
+.nome-comprador input,
+.cpf-comprador input {
+    box-sizing: border-box;
+    width: 327px;
+    height: 51px;
+    background: #FFFFFF;
+    border: 1px solid #D5D5D5;
+    border-radius: 3px;
+    padding-left: 18px;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #AFAFAF;
+}
+
+button {
+    width: 225px;
+    height: 42px;
+    background: #E8833A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    margin-top: 57px;
+    margin-left: 72px;
+    margin: 57px 0 0 72px;
+}
+
+button p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+}
+.seats-gallery .azul{
+    background: #C3CFD9;
+    border: 1px solid #7B8B99;
+}
+.seats-gallery .amarelo{
+    background: #FBE192;
+    border: 1px solid #F7C52B;
+}
+.seats-gallery .verde{
+    background: #8DD7CF;
+    border: 1px solid #1AAE9E;
+} 

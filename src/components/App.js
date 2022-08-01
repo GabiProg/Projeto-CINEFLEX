@@ -5,18 +5,18 @@ import Sessions from "./Sessions";
 import Seats from "./Seats";
 import Success from "./Success";
 
-export default function App(){
-    return(
+export default function App() {
+  return (
     <>
-        <BrowserRouter>
-            <Navbar/>
-            <Routes>
-                <Route path="/" element={<MovieGallery/>} />
-                <Route path="/sessoes/:id" element={<Sessions/>} />
-                <Route path="/assentos/:id" element={<Seats/>} />
-                <Route path="/sucesso" element={<Success/>} />
-            </Routes>
-        </BrowserRouter>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<MovieGallery />} />
+          <Route path="/sessoes/:id" element={<Sessions />} />
+          <Route path="/assentos/:id" element={<Seats />} />
+          <Route path="/sucesso" element={<Success />} />
+        </Routes>
+      </BrowserRouter>
     </>
-    );
+  );
 }

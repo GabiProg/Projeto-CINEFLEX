@@ -1,3 +1,3 @@
-export default function Success(){
-    return(<>EU SOU O SUCESSO</>);
+export default function Success() {
+  return <>EU SOU O SUCESSO</>;
 }
