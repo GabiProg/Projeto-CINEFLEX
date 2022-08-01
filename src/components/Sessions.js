@@ -7,6 +7,7 @@ import "../styles/Reset.css";
 import "../styles/Style_session.css";
 
 function DatesGallery({ day, data, showtimes, id }) {
+
   return (
     <>
       <div>
@@ -21,10 +22,10 @@ function DatesGallery({ day, data, showtimes, id }) {
   );
 }
 
-export default function Sessions() {
+export default function Sessions(props) {
   const { id } = useParams();
 
-  const [dates, setDates] = useState();
+  const {dates, setDates} = props;
 
   useEffect(() => {
     const URL = `https://mock-api.driven.com.br/api/v5/cineflex/movies/${id}/showtimes`;
@@ -56,12 +57,14 @@ export default function Sessions() {
           </div>
         </div>
       </div>
-      {dates ? (
+      {dates? (
         <Footer
           key={dates.id}
           src={dates.posterURL}
           alt={dates.title}
           name={dates.title}
+          day={dates.weekday}
+          data={dates.date}
         />
       ) : (
         "loading..."

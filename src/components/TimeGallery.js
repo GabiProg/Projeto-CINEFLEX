@@ -13,7 +13,8 @@ function Times({ name, id }) {
   );
 }
 
-export default function TimeGallery({ showtimes, id }) {
+export default function TimeGallery({showtimes, id}) {
+
   const [hours, setHours] = useState(showtimes, id);
 
   return (

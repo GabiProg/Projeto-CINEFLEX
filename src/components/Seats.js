@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Footer from "./Footer";
 import Seat from "./Seat";
 import "../styles/Reset.css";
 import "../styles/Style_seats.css";
 
-export default function Seats() {
+export default function Seats(props) {
   const { id } = useParams();
+  const navigate = useNavigate();
+  const {dates} = props;
 
   const [chairs, setChairs] = useState(null);
   const [nome, setNome] = useState("");
@@ -35,13 +37,20 @@ export default function Seats() {
     });
   }, []);
 
-  function GetUserInformation(){
-    const request = axios.post('', {
+  function GetUserInformation(e){
+    e.preventDefault();
+    
+    const OBJ = {
       ids: [...selectedSeats.keys()],
       name: nome,
       cpf: cpf   
-    });
+    };
+
+    const request = axios.post('https://mock-api.driven.com.br/api/v7/cineflex/seats/book-many', OBJ);
   }
+  
+
+  
 
   return (
     <>
@@ -74,31 +83,28 @@ export default function Seats() {
             <p>Indisponível</p>
           </div>
         </div>
-        <form>
+        <form onSubmit={GetUserInformation}>
         <div className="nome-comprador">
           <label id="campoNome" for="campoNome">Nome do comprador:</label>
-          <input type="text" id="campoNome" placeholder="Digite seu nome..." />
+          <input type="text" id="campoNome" placeholder="Digite seu nome..." 
+          value={nome} onChange={e => setNome(e.target.value)} required/>
         </div>
         <div className="cpf-comprador">
           <label id="campoCPF" for="campoCPF">CPF do comprador:</label>
-          <input type="text" id="campoCPF" placeholder="Digite seu CPF..." />
+          <input type="text" id="campoCPF" placeholder="Digite seu CPF..."
+          value={cpf} onChange={e => setCpf(e.target.value)} required/>
         </div>
-        <button>
+        <button type="submit">
           <p>Reservar assento(s)</p>
         </button>
         </form>
       </div>
-      {chairs !== null ? (
-        <Footer
-          name={chairs.title}
-          key={chairs.id}
-          id={chairs.id}
-          day={chairs.weekday}
-          data={chairs.date}
-        />
-      ) : (
-        "loading..."
-      )} 
+      {dates ? (<Footer key={dates.id}
+          src={dates.posterURL}
+          alt={dates.title}
+          name={dates.title}
+          day={dates.weekday}
+          data={dates.date}/>) : ('loading...')} 
     </>
   );
 }
